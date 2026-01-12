@@ -15,6 +15,7 @@
 - [] starship
 - [] env
 - [] brave
+- [x] bat
 - [] uninstall stuff(firefox, konsole...)
 - [] bash
 - [] start
