@@ -15,6 +15,8 @@
 - [] starship
 - [] env
 - [] brave
+- [] yazi
+- [x] scrcpy
 - [x] bat
 - [] uninstall stuff(firefox, konsole...)
 - [] bash

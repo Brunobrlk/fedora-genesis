@@ -8,7 +8,8 @@ logi() { echo -e "\033[0;34m[BRLK INFO]\033[0m - $1"; }
 
 # Install bat
 if ! command -v bat >/dev/null 2>&1; then
-  sudo dnf install bat
+  sudo dnf install -y bat
+
   logs "bat was successfully installed"
 else
   logi "bat is already installed"
