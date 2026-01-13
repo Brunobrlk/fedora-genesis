@@ -12,9 +12,9 @@
 - [] ssh
     # Check file existence: git_key
 - [] lunarvim
-- [] starship
+- [x] starship
 - [] env
-- [] brave
+- [x] brave
 - [] yazi
 - [x] scrcpy
 - [x] bat
