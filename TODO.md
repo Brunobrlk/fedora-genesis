@@ -7,14 +7,14 @@
 - [x] scrcpy
 - [x] bat
 - [x] tmux
+- [x] lunarvim
+- [x] fonts
 - [] gnupg
 - [] ssh
     # Check file existence: git_key
-- [] lunarvim
 - [] env
 - [] yazi
 - [] essential-tools
-- [] fonts
 - [] nvidia
 - [] git
     # Check config.local existence and warn the user
