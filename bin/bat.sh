@@ -7,18 +7,18 @@ logs() { printf '\033[0;32m[BRLK SUCCESS]\033[0m - %s\n' "$1"; }
 logi() { printf '\033[0;34m[BRLK INFO]\033[0m - %s\n' "$1"; }
 loge() { printf '\033[0;31m[BRLK ERROR]\033[0m - %s\n' "$1" >&2; }
 
+# Dependency Check
+if ! command -v curl >/dev/null 2>&1; then
+  loge "Missing dependency: curl"
+  exit 1
+fi
+
 # Install bat
 if ! command -v bat >/dev/null 2>&1; then
   sudo dnf install -y bat
   logs "bat was successfully installed"
 else
   logi "bat is already installed"
-fi
-
-# Dependency Check
-if ! command -v curl >/dev/null 2>&1; then
-  loge "Command not found: curl"
-  exit 1
 fi
 
 # Catppuccin Macchiato theme
