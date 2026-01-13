@@ -3,8 +3,8 @@
 
 set -euo pipefail
 
-logs() { echo -e "\033[0;32m[BRLK SUCCESS]\033[0m - $1"; }
-logi() { echo -e "\033[0;34m[BRLK INFO]\033[0m - $1"; }
+logs() { printf '\033[0;32m[BRLK SUCCESS]\033[0m - %s\n' "$1"; }
+logi() { printf '\033[0;34m[BRLK INFO]\033[0m - %s\n' "$1"; }
 
 if ! command -v scrcpy >/dev/null 2>&1; then
   sudo dnf copr enable -y zeno/scrcpy
