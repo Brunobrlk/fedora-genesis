@@ -9,13 +9,13 @@
 - [x] tmux
 - [x] lunarvim
 - [x] fonts
+- [x] nvidia
 - [] gnupg
 - [] ssh
     # Check file existence: git_key
 - [] env
 - [] yazi
 - [] essential-tools
-- [] nvidia
 - [] git
     # Check config.local existence and warn the user
 - [] uninstall stuff(firefox, konsole...)
