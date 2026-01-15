@@ -1,0 +1,11 @@
+make
+curl
+wget
+git
+fzf
+alacritty
+neovim
+fastfetch
+diff-so-fancy
+discord
+gimp

@@ -1,6 +1,5 @@
 # Core
-- [] Require sudo priviledges
-- [] add fusion repositories
+- [x] add fusion repositories
 - [x] mise
 - [x] starship
 - [x] brave
@@ -10,17 +9,10 @@
 - [x] lunarvim
 - [x] fonts
 - [x] nvidia
-- [] gnupg
-- [] ssh
-    # Check file existence: git_key
-- [] env
 - [] yazi
 - [] essential-tools
-- [] git
-    # Check config.local existence and warn the user
-- [] uninstall stuff(firefox, konsole...)
-- [] bash
-- [] start
+- [x] uninstall stuff(firefox, konsole...)
+- [x] start
     # Execute all scripts. Think how to handle nvidia that requires reboot:
     #   Once the script make proper checks, the warn "Execute this script again"
     #   makes sense here once it'll skip all unnecessary stuff. Also put it into the beginning
