@@ -9,8 +9,8 @@ logi() { printf '\033[0;34m[BRLK INFO]\033[0m - %s\n' "$1"; }
 # Install starship
 if ! command -v starship >/dev/null 2>&1; then
   logi "Installing starship"
-  dnf copr enable atim/starship
-  dnf install starship
+  dnf copr enable -y atim/starship
+  dnf install -y starship
 
   logs "Starship was successfully installed"
 else

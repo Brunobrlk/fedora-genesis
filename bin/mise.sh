@@ -9,8 +9,8 @@ logi() { printf '\033[0;34m[BRLK INFO]\033[0m - %s\n' "$1"; }
 # Install mise
 if ! command -v mise >/dev/null 2>&1; then
   logi "Installing mise"
-  dnf copr enable jdxcode/mise
-  dnf install mise
+  dnf copr enable -y jdxcode/mise
+  dnf install -y mise
 
   logs "mise was successfully installed"
 else
