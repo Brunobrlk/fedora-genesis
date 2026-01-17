@@ -17,6 +17,7 @@
     #   Once the script make proper checks, the warn "Execute this script again"
     #   makes sense here once it'll skip all unnecessary stuff. Also put it into the beginning
 - [x] README.md
+- [] Disable services
 - [] Avoid flatpak
     - [x] Brave
     - [x] Discord
@@ -25,8 +26,8 @@
     - [x] Anydesk
     - [x] Spotify
     - [x] Dbeaver - There's an issue going on #8057 - Create script installer
-    - [] Insomnia - Create script installer
-    - [] Postman - Create script installer
+    - [x] Insomnia - Create script installer
+    - [x] Postman - Create script installer
     - [] Todoist - No rpm. Find alternatives(TickTick?)
 
 # Desktop Environment Specific

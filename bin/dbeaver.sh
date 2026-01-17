@@ -38,6 +38,6 @@ latest_ver="$(latest_version)"
 if [[ "$installed_ver" == "$latest_ver" ]]; then
   logi "DBeaver is already up-to-date ($installed_ver)"
 else
-  echo "Installing/upgrading DBeaver: $installed_ver → $latest_ver"
+  logi "Installing/upgrading DBeaver: $installed_ver → $latest_ver"
   install_or_upgrade "$latest_ver"
 fi
