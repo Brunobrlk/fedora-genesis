@@ -10,13 +10,13 @@
 - [x] fonts
 - [x] nvidia
 - [x] yazi
-- [ ] essential-tools
 - [x] uninstall stuff(firefox, konsole...)
 - [x] start
-- [ ] android-studio
-- [ ] cmdline-tools
-- [ ] android-sdk
 - [x] docker
+- [x] cmdline-tools
+- [ ] essential-tools: tldr
+- [ ] android-sdk
+- [ ] android-studio
 - [ ] virt-manager
 
     Execute all scripts. Think how to handle nvidia that requires reboot:
