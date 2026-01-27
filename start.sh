@@ -131,7 +131,7 @@ is_sway() {
 # ──────────────────────────────────────────────────────────────────────────────
 # DE-specific setup
 # ──────────────────────────────────────────────────────────────────────────────
-setup_de_specific_software() {
+setup_desktop_specific_software() {
   if is_gnome; then
     logi "Detected GNOME"
     install_custom_software "$SCRIPT_DIR/gnome"
@@ -155,7 +155,7 @@ main() {
   install_flatpak_pkgs "$PKGS_FLATPAK"
   remove_dnf_pkgs "$PKGS_DNF_RM"
   install_custom_software "$CUSTOM_SCRIPTS"
-  setup_de_specific_software
+  setup_desktop_specific_software
 }
 
 # ──────────────────────────────────────────────────────────────────────────────
