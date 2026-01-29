@@ -61,10 +61,14 @@ install_pkg "platform-tools"
 install_pkg "emulator"
 
 # AVD Creation
+AVD_DIR="${ANDROID_AVD_HOME:-$HOME/.config/android/avd}"
+mkdir -p "$AVD_DIR"
+
 AVD_IMG="$AVDIMG_VERSION;$AVDIMG_FLAVOR;$AVDIMG_ARCH"
 install_pkg "$AVD_IMG"
 
-AVD_NAME="${PLATFORM_VERSION##*;}-$AVDIMG_FLAVOR-$AVDIMG_ARCH"
+API_LVL="${AVDIMG_VERSION##*-}"
+AVD_NAME="api$API_LVL-$AVDIMG_FLAVOR-$AVDIMG_ARCH"
 logi "Creating basic AVD: $AVD_NAME"
 echo "no" | avdmanager create avd \
   -f \

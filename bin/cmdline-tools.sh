@@ -4,8 +4,8 @@ set -euo pipefail
 logi() { printf '\033[0;34m[BRLK INFO]\033[0m - %s\n' "$1"; }
 logs() { printf '\033[0;32m[BRLK SUCCESS]\033[0m - %s\n' "$1"; }
 
-readonly DEST_DIR="$HOME/src"
 readonly ANDROID_HOME="${ANDROID_HOME:-$HOME/opt/android-sdk}"
+readonly DEST_DIR="$ANDROID_HOME"
 
 # Dependency Check
 if command -v sdkmanager >/dev/null 2>&1; then
@@ -37,7 +37,3 @@ logi "Installing into: $DEST_DIR"
 mkdir -p "$DEST_DIR/cmdline-tools/latest"
 rsync -av "$EXTRACT_DIR/cmdline-tools/" "$DEST_DIR/cmdline-tools/latest/"
 logs "Installation complete"
-
-mkdir -p "$ANDROID_HOME"
-ln -s "$DEST_DIR/cmdline-tools" "$ANDROID_HOME/cmdline-tools"
-logi "Symlink created to ensure compatibility -> $ANDROID_HOME/cmdline-tools/"
