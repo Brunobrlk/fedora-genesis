@@ -67,8 +67,8 @@ install_pkg "$AVD_IMG"
 AVD_NAME="${PLATFORM_VERSION##*;}-$AVDIMG_FLAVOR-$AVDIMG_ARCH"
 logi "Creating basic AVD: $AVD_NAME"
 echo "no" | avdmanager create avd \
+  -f \
   -n "$AVD_NAME" \
   -k "$AVD_IMG" \
-  -f
 
 logs "Successfully installed android sdk and created avd"

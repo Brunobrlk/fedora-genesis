@@ -7,6 +7,12 @@ logs() { printf '\033[0;32m[BRLK SUCCESS]\033[0m - %s\n' "$1"; }
 readonly DEST_DIR="$HOME/src"
 readonly ANDROID_HOME="${ANDROID_HOME:-$HOME/opt/android-sdk}"
 
+# Dependency Check
+if command -v sdkmanager >/dev/null 2>&1; then
+  logi "cmdline-tools is already installed"
+  exit 1
+fi
+
 TMP_DIR="$(mktemp -d)"
 trap 'rm -rf "$TMP_DIR"' EXIT
 
