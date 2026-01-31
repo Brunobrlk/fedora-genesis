@@ -14,9 +14,9 @@
 - [x] start
 - [x] docker
 - [x] cmdline-tools
+- [x] android-sdk
+- [x] android-studio
 - [ ] essential-tools: tldr
-- [ ] android-sdk
-- [ ] android-studio
 - [ ] virt-manager
 
     Execute all scripts. Think how to handle nvidia that requires reboot:
