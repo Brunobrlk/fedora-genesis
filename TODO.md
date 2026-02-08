@@ -16,15 +16,16 @@
 - [x] cmdline-tools
 - [x] android-sdk
 - [x] android-studio
-- [ ] essential-tools: tldr
+- [ ] essential-tools: tldr, bat
 - [ ] virt-manager
+- [x] avd-devices
 
     Execute all scripts. Think how to handle nvidia that requires reboot:
 Once the script make proper checks, the warn "Execute this script again"
 makes sense here once it'll skip all unnecessary stuff. Also put it into the beginning
 
 - [x] README.md
-- [ ] Disable services
+- [ ] Disable services: Bluetooth, Cups, NetworkManager-wait-online
 - [x] Avoid flatpak
     - [x] Brave
     - [x] Discord

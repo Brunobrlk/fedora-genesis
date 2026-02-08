@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-readonly SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )/.." && pwd )"
+readonly SDK_ROOT="${ANDROID_SDK_ROOT:-${ANDROID_HOME:-}}"
 readonly AVDIMG_ARCH="x86_64"
 readonly AVDIMG_FLAVOR="default"
-readonly SDK_ROOT="${ANDROID_SDK_ROOT:-$ANDROID_HOME}"
 
 logi() { printf '\033[0;34m[BRLK INFO]\033[0m - %s\n' "$1"; }
 logs() { printf '\033[0;32m[BRLK SUCCESS]\033[0m - %s\n' "$1"; }
@@ -50,13 +49,15 @@ SDK_INSTALLED_LIST="$(safesdkmanager --list_installed)"
 PLATFORM_VERSION="$(echo "$SDK_LIST" | grep -o 'platforms;android-[0-9.]\+' | sort -V | tail -n1 )"
 BUILD_TOOLS_VERSION="$(echo "$SDK_LIST" | grep -o 'build-tools;[0-9.]\+' | sort -V | tail -n1 )"
 SOURCES_VERSION="$(echo "$SDK_LIST" | grep -o 'sources;android-[0-9.]\+' | sort -V | tail -n1 )"
-AVDIMG_VERSION="$(echo "$SDK_LIST" | grep -o 'system-images;android-[0-9]\+' | sort -V | tail -n1 )"
+AVDIMG_LVL="$(echo "$SDK_LIST" | grep -o 'system-images;android-[0-9]\+' | sort -V | tail -n1 )"
+AVDIMG_VERSION="$AVDIMG_LVL;$AVDIMG_FLAVOR;$AVDIMG_ARCH"
 
 # Sdk installation
 logi "Installing latest sdk components"
 install_pkg "$PLATFORM_VERSION"
 install_pkg "$BUILD_TOOLS_VERSION"
 install_pkg "$SOURCES_VERSION"
+install_pkg "$AVDIMG_VERSION"
 install_pkg "platform-tools"
 install_pkg "emulator"
 
@@ -64,15 +65,12 @@ install_pkg "emulator"
 AVD_DIR="${ANDROID_AVD_HOME:-$HOME/.config/android/avd}"
 mkdir -p "$AVD_DIR"
 
-AVD_IMG="$AVDIMG_VERSION;$AVDIMG_FLAVOR;$AVDIMG_ARCH"
-install_pkg "$AVD_IMG"
-
-API_LVL="${AVDIMG_VERSION##*-}"
+API_LVL="${AVDIMG_LVL##*-}"
 AVD_NAME="api$API_LVL-$AVDIMG_FLAVOR-$AVDIMG_ARCH"
 logi "Creating basic AVD: $AVD_NAME"
 echo "no" | avdmanager create avd \
   -f \
   -n "$AVD_NAME" \
-  -k "$AVD_IMG" \
+  -k "$AVD_IMG"
 
-logs "Successfully installed android sdk and created avd"
+logs "Successfully installed android sdk latest components"
