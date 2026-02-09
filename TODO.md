@@ -17,7 +17,7 @@
 - [x] android-sdk
 - [x] android-studio
 - [ ] essential-tools: tldr, bat
-- [ ] virt-manager
+- [x] virt-manager
 - [x] avd-devices
 
     Execute all scripts. Think how to handle nvidia that requires reboot:

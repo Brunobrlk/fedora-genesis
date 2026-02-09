@@ -128,7 +128,7 @@ check_virtualization_setup() {
   logw "Please reboot to ensure that no issues remain"
 }
 
-optmize_performance(){
+optimize_performance(){
   logi "Applying tuned virtual-host profile"
 
   sudo systemctl enable --now tuned
@@ -167,7 +167,9 @@ main() {
   ensure_hardware_support
   ensure_kvm_modules
 
-  install_packages
+  install_main_components
+  install_clients
+  install_extra_tools
   install_windows_virtio
 
   enable_libvirt_services
