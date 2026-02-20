@@ -42,7 +42,8 @@ makes sense here once it'll skip all unnecessary stuff. Also put it into the beg
 ## KDE
 - [ ] Colorscheme(Themes, Wallpaper, fonts)
 - [ ] UI behavior
-- [ ] Keyboard shortcuts and options
+- [ ] dolphi->nemo & kmail->thunderbird
+- [x] Keyboard shortcuts and options
 
 ## Sway
 - [ ] Colorscheme(Themes, Wallpaper, fonts)
