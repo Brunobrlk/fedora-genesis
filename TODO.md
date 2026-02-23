@@ -19,6 +19,7 @@
 - [ ] essential-tools: tldr, bat
 - [x] virt-manager
 - [x] avd-devices
+- [x] Bruno
 
     Execute all scripts. Think how to handle nvidia that requires reboot:
 Once the script make proper checks, the warn "Execute this script again"
